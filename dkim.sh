@@ -17,8 +17,8 @@ echo "\n====\nServer Properties (Note: replace the <n> below with an n)\n===="
 echo "DKIM_PRIVATE_KEY = $PRIV_KEY"
 
 
-echo "DKIM_DOMAIN = \"dllgroup.com\""
-echo "DKIM_SELECTOR = \"ciportal\""
+echo "DKIM_DOMAIN = \"$DOMAIN\""
+echo "DKIM_SELECTOR = \"$KEY_NAME\""
 
 # Display DNS details
 echo "\n====\nDomain Information\n===="
