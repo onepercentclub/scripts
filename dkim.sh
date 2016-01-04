@@ -22,5 +22,5 @@ echo "DKIM_SELECTOR = \"$KEY_NAME\""
 
 # Display DNS details
 echo "\n====\nDomain Information\n===="
-echo "TXT Hostname: ciportal._domainkey.$DOMAIN"
+echo "TXT Hostname: $KEY_NAME._domainkey.$DOMAIN"
 echo "TXT Content: v=DKIM1;t=s;n=core;p=$PUB_KEY"
