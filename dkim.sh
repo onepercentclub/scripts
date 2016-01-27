@@ -9,7 +9,7 @@ openssl genrsa -out $DOMAIN.priv 1024
 openssl rsa -in $DOMAIN.priv -out $DOMAIN.pub -pubout -outform PEM
 
 # One line the public key
-PUB_KEY=`tr -d '\n' < $DOMAIN.pub | sed "s/^-----BEGIN PUBLIC KEY-----\n//" | sed "s/-----END PUBLIC KEY-----$//"`
+PUB_KEY=`tr -d '\n' < $DOMAIN.pub | sed "s/^-----BEGIN PUBLIC KEY-----//" | sed "s/-----END PUBLIC KEY-----$//"`
 
 # Display server properties
 PRIV_KEY=`cat $DOMAIN.priv | sed 's/^/    \"/' | sed 's/$/\"/'`
